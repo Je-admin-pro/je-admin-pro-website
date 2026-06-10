@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* ====================== Design tokens ====================== */
+@theme {
+  /* Couleurs */
+  --color-marine:          #14385A; /* titres, éléments secondaires */
+  --color-marine-light:    #1E4F7A; /* variante hover marine */
+  --color-turquoise:       #2A7E86; /* accent principal */
+  --color-turquoise-light: #3A9BA5; /* variante hover turquoise */
+  --color-cream:           #FAFAF8; /* fond principal */
+  --color-cream-dark:      #F0F0EB; /* fond sections alternées */
+  --color-anthracite:      #333333; /* texte corps */
+  --color-muted:           #6B7280; /* texte secondaire / muted */
+  --color-muted-light:     #9CA3AF; /* texte très discret */
+
+  /* Typographie */
+  --font-sans:    'Poppins', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+}
+
+/* ====================== Base ====================== */
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-cream);
+    color: var(--color-anthracite);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ====================== Hero (CSS-only, pas d'opacité) ====================== */
+@keyframes hero-from-left {
+  from { transform: translateX(-2.5rem); }
+  to   { transform: none; }
+}
+@keyframes hero-from-right {
+  from { transform: translateX(2.5rem); }
+  to   { transform: none; }
+}
+.hero-slide-left  { animation: hero-from-left  0.75s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.hero-slide-right { animation: hero-from-right 0.75s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* ====================== Bouton gradient ====================== */
+.btn-gradient {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(to right, var(--color-turquoise), var(--color-marine));
+}
+.btn-gradient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to right, var(--color-turquoise-light), var(--color-marine-light));
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1;
+}
+.btn-gradient:hover::after { opacity: 1; }
+
+/* ====================== Bouton outline gradient ====================== */
+.btn-outline-gradient {
+  position: relative;
+  isolation: isolate;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(var(--color-cream), var(--color-cream)) padding-box,
+    linear-gradient(to right, var(--color-turquoise), var(--color-marine)) border-box;
+  color: var(--color-marine);
+  transition: color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-outline-gradient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to right, var(--color-turquoise), var(--color-marine));
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1;
+}
+.btn-outline-gradient:hover::after { opacity: 1; }
+.btn-outline-gradient:hover { color: var(--color-cream); }
+
+/* ====================== Navbar ====================== */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-turquoise);
+  transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-link:hover::after { width: 100%; }
+
+/* ====================== Reveal au scroll ====================== */
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal[data-reveal="up"]    { transform: translateY(2.5rem); }
+.reveal[data-reveal="left"]  { transform: translateX(-2.5rem); }
+.reveal[data-reveal="right"] { transform: translateX(2.5rem); }
+.reveal[data-reveal="scale"] { transform: scale(0.92); }
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ====================== Marquee ====================== */
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+.marquee:hover { animation-play-state: paused; }
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* ====================== Prefers-reduced-motion ====================== */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .marquee { animation: none !important; }
+  .hero-slide-left, .hero-slide-right { animation: none !important; }
+}

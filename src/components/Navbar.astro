@@ -1,0 +1,164 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo.webp";
+import { site, navLinks } from "../config.ts";
+---
+
+<header
+  id="navbar"
+  class="fixed top-0 inset-x-0 z-50 bg-cream/95 backdrop-blur-sm transition-shadow duration-300"
+>
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" aria-label={site.name}>
+        <Image
+          src={logo}
+          alt={site.name}
+          height={60}
+          loading="eager"
+          class="h-15 w-auto"
+        />
+      </a>
+
+      <!-- Navigation desktop -->
+      <nav
+        class="hidden md:flex items-center gap-8"
+        aria-label="Navigation principale"
+      >
+        {
+          navLinks.map(({ href, label }) => (
+            <a
+              href={href}
+              class="nav-link relative text-sm font-medium text-anthracite hover:text-turquoise transition-colors duration-200"
+            >
+              {label}
+            </a>
+          ))
+        }
+      </nav>
+
+      <!-- CTA + Burger -->
+      <div class="flex items-center gap-3">
+        <a
+          href={site.calendly}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-gradient hidden md:inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium text-cream"
+        >
+          Prendre RDV
+        </a>
+
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg hover:bg-cream-dark transition-colors"
+        >
+          <svg
+            id="icon-menu"
+            class="w-5 h-5 text-marine"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+          </svg>
+          <svg
+            id="icon-close"
+            class="w-5 h-5 text-marine hidden"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu mobile -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-cream-dark bg-cream"
+  >
+    <nav
+      class="max-w-6xl mx-auto px-6 py-4 flex flex-col"
+      aria-label="Navigation mobile"
+    >
+      {
+        navLinks.map(({ href, label }) => (
+          <a
+            href={href}
+            class="py-3.5 text-base font-medium text-anthracite hover:text-turquoise border-b border-cream-dark last:border-0 transition-colors duration-200"
+          >
+            {label}
+          </a>
+        ))
+      }
+      <a
+        href={site.calendly}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-gradient mt-5 mb-1 flex justify-center items-center px-6 py-3 rounded-full text-sm font-medium text-cream"
+      >
+        Prendre RDV
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById(
+    "menu-toggle",
+  ) as HTMLButtonElement | null;
+  const menu = document.getElementById("mobile-menu");
+  const iconMenu = document.getElementById("icon-menu");
+  const iconClose = document.getElementById("icon-close");
+  const navbar = document.getElementById("navbar");
+
+  function openMenu() {
+    menu?.classList.remove("hidden");
+    iconMenu?.classList.add("hidden");
+    iconClose?.classList.remove("hidden");
+    toggle?.setAttribute("aria-expanded", "true");
+    toggle?.setAttribute("aria-label", "Fermer le menu");
+  }
+
+  function closeMenu() {
+    menu?.classList.add("hidden");
+    iconMenu?.classList.remove("hidden");
+    iconClose?.classList.add("hidden");
+    toggle?.setAttribute("aria-expanded", "false");
+    toggle?.setAttribute("aria-label", "Ouvrir le menu");
+  }
+
+  toggle?.addEventListener("click", () => {
+    toggle.getAttribute("aria-expanded") === "true" ? closeMenu() : openMenu();
+  });
+
+  menu
+    ?.querySelectorAll("a")
+    .forEach((a) => a.addEventListener("click", closeMenu));
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      navbar?.classList.toggle("shadow-sm", window.scrollY > 8);
+    },
+    { passive: true },
+  );
+</script>

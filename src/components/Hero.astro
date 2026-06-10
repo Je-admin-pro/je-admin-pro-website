@@ -1,0 +1,99 @@
+---
+import { Image } from "astro:assets";
+import { site } from "../config.ts";
+import hero from "../assets/hero.jpg";
+---
+
+<section class="bg-cream overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div
+      class="grid md:grid-cols-2 gap-12 lg:gap-20 min-h-[calc(100svh-4rem)] items-center py-16 md:py-20"
+    >
+      <!-- Image gauche (desktop) / bas (mobile) -->
+      <div class="relative order-2 md:order-1 hero-slide-left">
+        <!-- Bloc accent derrière l'image (desktop uniquement) -->
+        <div
+          class="absolute -bottom-5 -left-5 w-full h-full rounded-2xl bg-turquoise/15 blur-sm hidden md:block"
+        >
+        </div>
+        <!-- Conteneur image -->
+        <div
+          class="relative aspect-video md:aspect-[3/4] rounded-2xl overflow-hidden bg-marine/10"
+        >
+          <Image
+            src={hero}
+            alt="Bureau organisé"
+            class="w-full h-full object-cover"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+
+      <!-- Texte droite (desktop) / haut (mobile) -->
+      <div
+        class="flex flex-col items-start gap-6 hero-slide-right order-1 md:order-2"
+      >
+        <!-- Label SEO -->
+        <p
+          class="text-turquoise text-xs font-sans font-semibold tracking-[0.18em] uppercase"
+        >
+          Votre assistante administrative à Sélestat
+        </p>
+
+        <!-- Headline -->
+        <h1
+          class="font-display text-4xl lg:text-5xl text-marine leading-[1.15] font-semibold"
+        >
+          Parce qu'un dirigeant ne devrait <span class="text-turquoise"
+            >jamais être seul</span
+          > face à son&nbsp;administratif.
+        </h1>
+
+        <!-- Séparateur -->
+        <div
+          class="w-50 h-1 bg-linear-to-r from-transparent to-transparent via-turquoise"
+        >
+        </div>
+
+        <!-- Sous-titre -->
+        <p class="text-base text-muted leading-relaxed max-w-md">
+          J'accompagne les dirigeants de TPE/PME, notamment de la restauration,
+          dans la gestion de leur administratif afin qu'ils puissent se
+          concentrer sur le développement de leur entreprise.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center gap-4 mt-2">
+          <a
+            href={site.calendly}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gradient inline-flex items-center px-6 py-3 rounded-full text-sm font-medium font-sans text-cream"
+          >
+            Prendre RDV
+          </a>
+          <a
+            href="#offres"
+            class="btn-outline-gradient inline-flex items-center gap-2 px-6 py-3 text-sm font-medium font-sans rounded-full"
+          >
+            Découvrir mes prestations
+            <svg
+              class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
