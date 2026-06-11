@@ -3,8 +3,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
-// TODO: remplacer par le domaine réel
-const SITE_URL = 'https://TODO.fr';
+const SITE_URL = 'https://je-admin-pro.fr';
 
 export default defineConfig({
   site: SITE_URL,

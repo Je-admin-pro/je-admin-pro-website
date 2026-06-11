@@ -24,6 +24,6 @@
 
 ## Pages
 
-- Accueil : https://TODO.fr/
-- Mentions légales : https://TODO.fr/mentions-legales
-- Politique de confidentialité : https://TODO.fr/politique-de-confidentialite
+- Accueil : https://je-admin-pro.fr/
+- Mentions légales : https://je-admin-pro.fr/mentions-legales
+- Politique de confidentialité : https://je-admin-pro.fr/politique-de-confidentialite

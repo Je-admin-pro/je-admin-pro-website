@@ -10,7 +10,7 @@ export const site = {
   email: "je.admin.pro@gmail.com",
   phone: "06 49 99 94 47",
   calendly: "https://calendly.com/je-admin-pro/30min",
-  url: "https://je-admin-pro-website.vercel.app",
+  url: "https://je-admin-pro.fr",
   description: "Julie Etienne, assistante administrative indépendante spécialisée dans la restauration à Sélestat. Audit, organisation et accompagnement des dirigeants de TPE/PME.",
 } as const;
 

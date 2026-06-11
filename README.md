@@ -1,46 +1,57 @@
-# Astro Starter Kit: Basics
+# je-admin-pro-website
 
-```sh
-npm create astro@latest -- --template basics
+Site vitrine de **Julie Etienne**, assistante administrative indépendante spécialisée dans la restauration à Sélestat.
+
+## Stack
+
+- [Astro](https://astro.build) v6 — générateur de site statique
+- [Tailwind CSS](https://tailwindcss.com) v4 — design tokens via `@theme`
+- TypeScript strict
+- Déployé sur Vercel
+
+## Lancer le projet
+
+```bash
+npm install
+npm run dev       # http://localhost:4321
+npm run build     # build de production dans dist/
+npm run preview   # prévisualise le build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Node.js >= 22.12.0 requis.
 
-## 🚀 Project Structure
+## Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```
+src/
+├── config.ts              # Données du site (textes, offres, FAQ…)
+├── layouts/Layout.astro   # Layout principal (meta, SEO, Schema.org)
+├── pages/
+│   ├── index.astro
+│   ├── mentions-legales.astro
+│   └── politique-de-confidentialite.astro
+├── components/
+│   ├── Navbar.astro       # Nav fixe avec scroll-spy
+│   ├── Hero.astro
+│   ├── About.astro
+│   ├── Problems.astro
+│   ├── Solutions.astro
+│   ├── Offres.astro       # 4 offres en lignes colorées
+│   ├── Process.astro      # Méthode en 4 étapes
+│   ├── FAQ.astro          # Accordéon zero-JS
+│   ├── CTA.astro
+│   ├── Footer.astro
+│   ├── Marquee.astro
+│   └── Stats.astro
+├── scripts/animations.ts  # Scroll-reveal via IntersectionObserver
+├── styles/global.css
+└── assets/
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Contenu
 
-## 🧞 Commands
+Tout le contenu éditorial est centralisé dans **`src/config.ts`** : coordonnées, offres, étapes de la méthode, FAQ, mots-clés du marquee. C'est le seul fichier à modifier pour mettre à jour les textes.
 
-All commands are run from the root of the project, from a terminal:
+## TODOs
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Voir `todo.txt` (gitignored) pour la liste des points restants (domaine final, SIRET, favicon).
