@@ -15,7 +15,7 @@ const { items, reverse = false, speed = 35, class: className = "" } = Astro.prop
     style={`--marquee-speed: ${speed}s`}
     aria-hidden="true"
   >
-    {[...items, ...items].map((item) => (
+    {[...items, ...items, ...items, ...items].map((item) => (
       <li class="flex items-center gap-6 pr-6 shrink-0">
         <span class="whitespace-nowrap">{item}</span>
         <span class="w-1.5 h-1.5 rounded-full bg-current opacity-40 shrink-0"></span>
