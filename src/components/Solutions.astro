@@ -1,0 +1,46 @@
+---
+import { solutions } from "../config.ts";
+---
+
+<section id="solution" class="bg-cream-dark py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+
+    <!-- En-tête -->
+    <div class="max-w-2xl mb-14 reveal" data-reveal="up">
+      <p class="text-turquoise text-xs font-sans font-semibold tracking-[0.18em] uppercase mb-4">
+        Ma solution
+      </p>
+      <h2 class="font-display text-3xl lg:text-4xl text-marine leading-snug">
+        Ce que vous gagnez en travaillant avec moi
+      </h2>
+    </div>
+
+    <!-- Grille solutions -->
+    <ul class="grid md:grid-cols-2 gap-6">
+      {solutions.map((solution, i) => (
+        <li
+          class="reveal group bg-cream rounded-2xl px-8 py-8 flex gap-5 border border-cream-dark hover:border-turquoise/30 transition-colors duration-300"
+          data-reveal="up"
+          data-delay={i * 100}
+        >
+          <!-- Icône check -->
+          <div class="shrink-0 mt-0.5 w-8 h-8 rounded-full bg-turquoise/10 flex items-center justify-center text-turquoise group-hover:bg-turquoise group-hover:text-cream transition-colors duration-300">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+            </svg>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <h3 class="font-sans font-semibold text-marine text-base">
+              {solution.title}
+            </h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">
+              {solution.body}
+            </p>
+          </div>
+        </li>
+      ))}
+    </ul>
+
+  </div>
+</section>

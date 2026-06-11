@@ -1,8 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
+import Marquee from "../components/Marquee.astro";
+import Problems from "../components/Problems.astro";
+import Stats from "../components/Stats.astro";
+import Solutions from "../components/Solutions.astro";
+import About from "../components/About.astro";
+import { marqueeKeywords, marqueeValues } from "../config.ts";
 ---
 
 <Layout>
   <Hero />
+  <Stats />
+
+  <section class="bg-marine py-5 text-cream text-sm font-sans font-medium tracking-wide">
+    <Marquee items={marqueeKeywords} speed={40} />
+  </section>
+
+  <Problems />
+  <Solutions />
+  <About />
+
+  <section class="bg-cream py-5 text-marine text-sm font-sans font-medium tracking-wide border-t border-cream-dark">
+    <Marquee items={marqueeValues} reverse speed={45} />
+  </section>
 </Layout>

@@ -77,7 +77,7 @@ function initCounters(): void {
         obs.unobserve(entry.target);
       });
     },
-    { threshold: 0.5 },
+    { threshold: 0 },
   );
 
   counters.forEach((el) => observer.observe(el));

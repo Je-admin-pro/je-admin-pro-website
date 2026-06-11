@@ -1,0 +1,48 @@
+---
+import { problems } from "../config.ts";
+---
+
+<section id="problemes" class="bg-marine py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- En-tête -->
+    <div class="max-w-xl mb-14 reveal" data-reveal="up">
+      <p
+        class="text-turquoise-pale text-xs font-sans font-semibold tracking-[0.18em] uppercase mb-4"
+      >
+        Vous reconnaissez-vous ?
+      </p>
+      <h2 class="font-display text-3xl lg:text-4xl text-cream leading-snug">
+        Ces situations vous parlent&nbsp;?
+      </h2>
+    </div>
+
+    <!-- Grille -->
+    <ul class="grid md:grid-cols-2 gap-4">
+      {
+        problems.map((problem, i) => (
+          <li
+            class="reveal group flex items-start gap-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl px-6 py-5 transition-colors duration-300"
+            data-reveal="up"
+            data-delay={i * 80}
+          >
+            <span class="mt-0.5 shrink-0 w-6 h-6 rounded-full border border-turquoise/50 flex items-center justify-center text-turquoise-pale text-xs font-sans font-semibold">
+              {i + 1}
+            </span>
+            <p class="text-cream/80 text-sm leading-relaxed group-hover:text-cream transition-colors duration-300">
+              {problem}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- Accroche de sortie -->
+    <p
+      class="mt-12 text-center text-cream/80 font-sans italic reveal"
+      data-reveal="up"
+      data-delay="500"
+    >
+      Si vous avez hoché la tête… il est temps de changer ça.
+    </p>
+  </div>
+</section>
