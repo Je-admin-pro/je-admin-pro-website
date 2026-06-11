@@ -181,7 +181,7 @@ export const navLinks = [
 export const faq = [
   {
     question: "Comment se déroule la première prise de contact ?",
-    answer: "Un premier rendez-vous de découverte gratuit de 30 minutes — en visio ou en présentiel — permet de faire le point sur votre situation et de définir ensemble l'offre la plus adaptée. Sans engagement.",
+    answer: "Un premier rendez-vous de découverte gratuit de 30 minutes (en visio ou en présentiel) permet de faire le point sur votre situation et de définir ensemble l'offre la plus adaptée. Sans engagement.",
   },
   {
     question: "Quelle est la différence avec mon expert-comptable ?",
@@ -193,7 +193,7 @@ export const faq = [
   },
   {
     question: "Travaillez-vous à distance ou en présentiel ?",
-    answer: "Les deux, selon vos préférences et votre localisation. Les rendez-vous peuvent se tenir dans vos locaux ou en visio — l'essentiel est que vous soyez à l'aise.",
+    answer: "Les deux, selon vos préférences et votre localisation. Les rendez-vous peuvent se tenir dans vos locaux ou en visio. L'essentiel est que vous soyez à l'aise.",
   },
   {
     question: "Puis-je changer d'offre si mes besoins évoluent ?",
