@@ -12,15 +12,15 @@ const linkHref = (href: string) => (isHome ? href : `/${href}`);
   class="fixed top-0 inset-x-0 z-50 bg-cream/95 backdrop-blur-sm transition-shadow duration-300"
 >
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
+    <div class="flex items-center justify-between h-20">
       <!-- Logo -->
       <a href="/" aria-label={site.name}>
         <Image
           src={logo}
           alt={site.name}
-          height={60}
+          height={80}
           loading="eager"
-          class="h-15 w-auto"
+          class="h-full w-auto object-contain"
         />
       </a>
 
@@ -166,7 +166,9 @@ const linkHref = (href: string) => (isHome ? href : `/${href}`);
   );
 
   // Scroll spy
-  const navAnchors = document.querySelectorAll<HTMLAnchorElement>("a.nav-link[href^='#']");
+  const navAnchors = document.querySelectorAll<HTMLAnchorElement>(
+    "a.nav-link[href^='#']",
+  );
   const linkMap = new Map<string, HTMLAnchorElement>();
   navAnchors.forEach((a) => {
     const id = a.getAttribute("href")?.slice(1);
@@ -183,7 +185,10 @@ const linkHref = (href: string) => (isHome ? href : `/${href}`);
       });
       const activeId = [...linkMap.keys()].find((id) => intersecting.has(id));
       navAnchors.forEach((a) =>
-        a.classList.toggle("is-active", a.getAttribute("href") === `#${activeId}`)
+        a.classList.toggle(
+          "is-active",
+          a.getAttribute("href") === `#${activeId}`,
+        ),
       );
     },
     { rootMargin: "-10% 0px -10% 0px", threshold: 0 },

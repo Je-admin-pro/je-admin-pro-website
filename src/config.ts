@@ -10,6 +10,9 @@ export const site = {
   email: "je.admin.pro@gmail.com",
   phone: "06 49 99 94 47",
   calendly: "https://calendly.com/je-admin-pro/30min",
+  // TODO: mettre à jour avec le domaine final
+  url: "https://TODO.fr",
+  description: "Julie Etienne, assistante administrative indépendante spécialisée dans la restauration à Sélestat. Audit, organisation et accompagnement des dirigeants de TPE/PME.",
 } as const;
 
 /** Section statistiques. */
@@ -44,7 +47,7 @@ export const solutions = [
   },
   {
     title: "Une vision précise de votre activité et de vos objectifs",
-    body: "Tableaux de bord, suivi de facturation, indicateurs clés... vous disposez des bonnes informations au bon moment pour décider avec confiance.",
+    body: "Tableaux de bord et indicateurs clés... vous disposez des bonnes informations au bon moment pour décider avec confiance.",
   },
   {
     title: "Une entreprise sécurisée",
@@ -147,12 +150,10 @@ export const problems = [
 /** Bande défilante — mots-clés de services. */
 export const marqueeKeywords = [
   "Gestion administrative",
-  "Facturation & relances",
-  "Suivi comptable",
+  'Facturation & relances',
   "Tableaux de bord",
   "Gestion des plannings",
   "Rédaction de courriers",
-  "Permanence téléphonique",
   "Classement & archivage",
 ] as const;
 
