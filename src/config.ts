@@ -9,7 +9,7 @@ export const site = {
   niche: "spécialisée dans la restauration",
   email: "je.admin.pro@gmail.com",
   phone: "06 49 99 94 47",
-  calendly: "https://calendly.com/julie-etienne/decouverte", // TODO: lien Calendly réel
+  calendly: "https://calendly.com/je-admin-pro/30min",
 } as const;
 
 /** Section statistiques. */
