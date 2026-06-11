@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title?: string;
@@ -29,6 +30,7 @@ const { title = "Julie Etienne", description = "" } = Astro.props;
   <body class="pt-16">
     <Navbar />
     <slot />
+    <Footer />
     <script>
       import "../scripts/animations.ts";
     </script>

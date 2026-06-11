@@ -7,8 +7,8 @@ export const site = {
   role: "Assistante administrative indépendante",
   city: "Sélestat",
   niche: "spécialisée dans la restauration",
-  email: "contact@julie-etienne.fr", // TODO: email réel
-  phone: "06 00 00 00 00", // TODO: téléphone réel
+  email: "je.admin.pro@gmail.com",
+  phone: "06 49 99 94 47",
   calendly: "https://calendly.com/julie-etienne/decouverte", // TODO: lien Calendly réel
 } as const;
 
@@ -106,6 +106,34 @@ export const offres = [
   },
 ] as const;
 
+/** Livrables de la méthode. */
+export const deliverables = [
+  "Diagnostic avec compte-rendu détaillé",
+  "Plan d'action personnalisé et priorisé",
+  "Mise en place d'une organisation ajustée à vos besoins",
+  "Modèles de courrier, planning d'organisation hebdomadaire et check-list",
+] as const;
+
+/** Section méthode. */
+export const methodSteps = [
+  {
+    title: "Le Check-up Complet",
+    body: "Un audit approfondi de toute votre gestion administrative et vos obligations réglementaires.",
+  },
+  {
+    title: "Votre feuille de route",
+    body: "Je rédige pour vous un plan d'action personnalisé et priorisé, adapté à la réalité de votre entreprise.",
+  },
+  {
+    title: "Structuration et Sécurisation",
+    body: "Je travaille avec vous. Nous créons des méthodes de travail fluides et vérifions vos obligations administratives.",
+  },
+  {
+    title: "Autonomie et Suivi",
+    body: "Je vous remets des checklists. Nous effectuons un point de suivi un mois après mon intervention pour ajuster les derniers détails.",
+  },
+] as const;
+
 /** Section problèmes. */
 export const problems = [
   "Vous avez l'impression de stagner ou d'être bloqué dans votre activité.",
@@ -142,8 +170,36 @@ export const marqueeValues = [
 
 /** Liens d'ancrage de la navigation. */
 export const navLinks = [
-  { href: "#offres", label: "Prestations" },
-  { href: "#process", label: "Méthode" },
   { href: "#apropos", label: "À propos" },
+  { href: "#offres", label: "Offres" },
+  { href: "#process", label: "Méthode" },
   { href: "#faq", label: "FAQ" },
+] as const;
+
+/** Section FAQ. */
+export const faq = [
+  {
+    question: "Comment se déroule la première prise de contact ?",
+    answer: "Un premier rendez-vous de découverte gratuit de 30 minutes — en visio ou en présentiel — permet de faire le point sur votre situation et de définir ensemble l'offre la plus adaptée. Sans engagement.",
+  },
+  {
+    question: "Quelle est la différence avec mon expert-comptable ?",
+    answer: "L'expert-comptable traite vos chiffres. Moi, j'organise tout ce qui arrive avant : le classement, les dossiers, les relances, les plannings, les courriers. Nous sommes complémentaires, pas concurrents.",
+  },
+  {
+    question: "Mes documents et données sont-ils confidentiels ?",
+    answer: "Absolument. Une charte de confidentialité est signée dès le début de chaque mission. Vos données ne sont jamais partagées ni transmises à des tiers.",
+  },
+  {
+    question: "Travaillez-vous à distance ou en présentiel ?",
+    answer: "Les deux, selon vos préférences et votre localisation. Les rendez-vous peuvent se tenir dans vos locaux ou en visio — l'essentiel est que vous soyez à l'aise.",
+  },
+  {
+    question: "Puis-je changer d'offre si mes besoins évoluent ?",
+    answer: "Oui. Si votre situation change en cours de mission, nous réévaluons ensemble et ajustons l'accompagnement en conséquence.",
+  },
+  {
+    question: "Intervenez-vous uniquement dans la restauration ?",
+    answer: "La restauration est mon domaine de spécialisation, mais j'accompagne également d'autres TPE/PME dont les besoins en gestion administrative sont similaires. N'hésitez pas à me contacter pour en discuter.",
+  },
 ] as const;

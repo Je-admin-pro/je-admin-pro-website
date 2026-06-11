@@ -1,0 +1,28 @@
+---
+import { site } from "../config.ts";
+---
+
+<section class="bg-marine py-24 lg:py-32">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 flex flex-col items-center gap-10 text-center">
+
+    <p class="font-display text-3xl lg:text-4xl xl:text-5xl text-cream leading-snug reveal" data-reveal="up">
+      Parce qu'un dirigeant ne devrait<br class="hidden sm:block" />
+      <span class="text-turquoise-pale">jamais être seul</span> face à son administratif.
+    </p>
+
+    <a
+      href={site.calendly}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-gradient inline-flex items-center gap-2 px-8 py-4 rounded-full text-cream font-sans font-medium text-sm transition-all duration-300 reveal"
+      data-reveal="up"
+      data-delay={150}
+    >
+      Prendre rendez-vous
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+      </svg>
+    </a>
+
+  </div>
+</section>

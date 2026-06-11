@@ -3,19 +3,29 @@
 /* ====================== Design tokens ====================== */
 @theme {
   /* Couleurs */
-  --color-marine:          #14385A; /* titres, éléments secondaires */
-  --color-marine-light:    #1E4F7A; /* variante hover marine */
-  --color-turquoise:       #2A7E86; /* accent principal */
-  --color-turquoise-light: #3A9BA5; /* variante hover turquoise */
-  --color-turquoise-pale:  #7DD3DA; /* turquoise sur fond sombre */
-  --color-cream:           #FAFAF8; /* fond principal */
-  --color-cream-dark:      #F0F0EB; /* fond sections alternées */
-  --color-anthracite:      #333333; /* texte corps */
-  --color-muted:           #6B7280; /* texte secondaire / muted */
-  --color-muted-light:     #9CA3AF; /* texte très discret */
+  --color-marine: #14385A;
+  /* titres, éléments secondaires */
+  --color-marine-light: #1E4F7A;
+  /* variante hover marine */
+  --color-turquoise: #2A7E86;
+  /* accent principal */
+  --color-turquoise-light: #3A9BA5;
+  /* variante hover turquoise */
+  --color-turquoise-pale: #7DD3DA;
+  /* turquoise sur fond sombre */
+  --color-cream: #FAFAF8;
+  /* fond principal */
+  --color-cream-dark: #F0F0EB;
+  /* fond sections alternées */
+  --color-anthracite: #333333;
+  /* texte corps */
+  --color-muted: #6B7280;
+  /* texte secondaire / muted */
+  --color-muted-light: #9CA3AF;
+  /* texte très discret */
 
   /* Typographie */
-  --font-sans:    'Poppins', system-ui, sans-serif;
+  --font-sans: 'Poppins', system-ui, sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
 }
 
@@ -26,20 +36,41 @@
     background-color: var(--color-cream);
     color: var(--color-anthracite);
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    ;
   }
 }
 
+
+
 /* ====================== Hero (CSS-only, pas d'opacité) ====================== */
 @keyframes hero-from-left {
-  from { transform: translateX(-2.5rem); }
-  to   { transform: none; }
+  from {
+    transform: translateX(-2.5rem);
+  }
+
+  to {
+    transform: none;
+  }
 }
+
 @keyframes hero-from-right {
-  from { transform: translateX(2.5rem); }
-  to   { transform: none; }
+  from {
+    transform: translateX(2.5rem);
+  }
+
+  to {
+    transform: none;
+  }
 }
-.hero-slide-left  { animation: hero-from-left  0.75s cubic-bezier(0.22, 1, 0.36, 1) both; }
-.hero-slide-right { animation: hero-from-right 0.75s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+.hero-slide-left {
+  animation: hero-from-left 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-slide-right {
+  animation: hero-from-right 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
 
 /* ====================== Bouton gradient ====================== */
 .btn-gradient {
@@ -47,6 +78,7 @@
   isolation: isolate;
   background: linear-gradient(to right, var(--color-turquoise), var(--color-marine));
 }
+
 .btn-gradient::after {
   content: '';
   position: absolute;
@@ -57,7 +89,10 @@
   transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   z-index: -1;
 }
-.btn-gradient:hover::after { opacity: 1; }
+
+.btn-gradient:hover::after {
+  opacity: 1;
+}
 
 /* ====================== Bouton outline gradient ====================== */
 .btn-outline-gradient {
@@ -70,6 +105,7 @@
   color: var(--color-marine);
   transition: color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 .btn-outline-gradient::after {
   content: '';
   position: absolute;
@@ -80,8 +116,14 @@
   transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   z-index: -1;
 }
-.btn-outline-gradient:hover::after { opacity: 1; }
-.btn-outline-gradient:hover { color: var(--color-cream); }
+
+.btn-outline-gradient:hover::after {
+  opacity: 1;
+}
+
+.btn-outline-gradient:hover {
+  color: var(--color-cream);
+}
 
 /* ====================== Navbar ====================== */
 .nav-link::after {
@@ -94,7 +136,18 @@
   background-color: var(--color-turquoise);
   transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.nav-link:hover::after { width: 100%; }
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.is-active {
+  color: var(--color-turquoise);
+}
+
+.nav-link.is-active::after {
+  width: 100%;
+}
 
 /* ====================== Reveal au scroll ====================== */
 .reveal {
@@ -104,10 +157,23 @@
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
-.reveal[data-reveal="up"]    { transform: translateY(2.5rem); }
-.reveal[data-reveal="left"]  { transform: translateX(-2.5rem); }
-.reveal[data-reveal="right"] { transform: translateX(2.5rem); }
-.reveal[data-reveal="scale"] { transform: scale(0.92); }
+
+.reveal[data-reveal="up"] {
+  transform: translateY(2.5rem);
+}
+
+.reveal[data-reveal="left"] {
+  transform: translateX(-2.5rem);
+}
+
+.reveal[data-reveal="right"] {
+  transform: translateX(2.5rem);
+}
+
+.reveal[data-reveal="scale"] {
+  transform: scale(0.92);
+}
+
 .reveal.is-visible {
   opacity: 1;
   transform: none;
@@ -119,12 +185,30 @@
   width: max-content;
   animation: marquee var(--marquee-speed, 35s) linear infinite;
 }
+
 .marquee-reverse {
   animation-name: marquee-reverse;
 }
-.marquee:hover { animation-play-state: paused; }
-@keyframes marquee         { to   { transform: translateX(-50%); } }
-@keyframes marquee-reverse { from { transform: translateX(-50%); } to { transform: translateX(0%); } }
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
 
 /* ====================== Prefers-reduced-motion ====================== */
 @media (prefers-reduced-motion: reduce) {
@@ -133,6 +217,13 @@
     transform: none !important;
     transition: none !important;
   }
-  .marquee { animation: none !important; }
-  .hero-slide-left, .hero-slide-right { animation: none !important; }
+
+  .marquee {
+    animation: none !important;
+  }
+
+  .hero-slide-left,
+  .hero-slide-right {
+    animation: none !important;
+  }
 }

@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { site } from "../config.ts";
+---
+
+<Layout title={`Mentions légales — ${site.name}`}>
+  <main class="bg-cream min-h-screen">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
+
+      <h1 class="font-display text-3xl lg:text-4xl text-marine mb-10">Mentions légales</h1>
+
+      <div class="flex flex-col gap-10 font-sans text-sm text-anthracite leading-relaxed">
+
+        <section class="flex flex-col gap-3">
+          <h2 class="font-sans font-semibold text-marine text-base">Éditeur du site</h2>
+          <p>{site.name}<br />
+          {site.role}<br />
+          Auto-entrepreneur — SIRET : <span class="text-muted">TODO</span><br />
+          {site.city}<br />
+          E-mail : <a href={`mailto:${site.email}`} class="text-turquoise hover:underline">{site.email}</a><br />
+          Téléphone : {site.phone}
+          </p>
+          <p>Directeur de la publication : {site.name}</p>
+        </section>
+
+        <section class="flex flex-col gap-3">
+          <h2 class="font-sans font-semibold text-marine text-base">Hébergement</h2>
+          <p>
+            Ce site est hébergé par :<br />
+            Netlify, Inc.<br />
+            44 Montgomery Street, Suite 300<br />
+            San Francisco, CA 94104 — États-Unis<br />
+            <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer" class="text-turquoise hover:underline">www.netlify.com</a>
+          </p>
+        </section>
+
+        <section class="flex flex-col gap-3">
+          <h2 class="font-sans font-semibold text-marine text-base">Propriété intellectuelle</h2>
+          <p>
+            L'ensemble du contenu de ce site (textes, images, graphismes) est la propriété exclusive
+            de {site.name}, sauf mention contraire. Toute reproduction, même partielle, est interdite
+            sans autorisation préalable écrite.
+          </p>
+        </section>
+
+        <section class="flex flex-col gap-3">
+          <h2 class="font-sans font-semibold text-marine text-base">Limitation de responsabilité</h2>
+          <p>
+            {site.name} s'efforce de maintenir les informations publiées sur ce site exactes et à jour.
+            Toutefois, elle ne saurait être tenue responsable des erreurs, omissions ou résultats
+            obtenus suite à l'utilisation de ces informations.
+          </p>
+        </section>
+
+        <section class="flex flex-col gap-3">
+          <h2 class="font-sans font-semibold text-marine text-base">Liens hypertextes</h2>
+          <p>
+            Ce site peut contenir des liens vers des sites tiers. {site.name} n'exerce aucun contrôle
+            sur ces sites et décline toute responsabilité quant à leur contenu.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+</Layout>
