@@ -52,6 +52,60 @@ export const solutions = [
   },
 ] as const;
 
+/** Section offres. */
+export const offres = [
+  {
+
+    name: "Intervention ponctuelle",
+    tagline: "À la carte",
+    price: "50 €",
+    priceNote: "/heure",
+    features: [
+      "Pré-comptabilité",
+      "Constitution du dossier mensuel destiné à l'expert-comptable",
+    ],
+  },
+  {
+    name: "Clarté Gestion",
+    tagline: "Autonomie guidée",
+    price: "250 €",
+    priceNote: "",
+    features: [
+      "2 rendez-vous de 2H",
+      "Audit de votre gestion",
+      "Élaboration d'un compte rendu et d'un plan d'action pour structurer votre gestion en autonomie",
+      "Suivi à un mois",
+    ],
+  },
+  {
+    name: "Pilotage & Croissance",
+    tagline: "Bras droit du dirigeant",
+    price: "600 €",
+    priceNote: "/mois",
+    features: ["3 rendez-vous de 1H30 par mois",
+      "Audit de votre gestion",
+      "Mise en place de votre organisation",
+      "Aide à la prise de décision",
+      "Suivi mensuel",
+      "Ajustements",
+      "Conseils stratégiques"
+    ],
+  },
+  {
+    name: "Gestion Maîtrisée",
+    tagline: "Accompagnement complet",
+    price: "1 500 €",
+    priceNote: "",
+    features: [
+      "10 rendez-vous de 1H30 sur 3 mois",
+      "Audit de votre gestion",
+      "Mise en place de votre organisation",
+      "Structuration de la méthode de travail",
+      "Suivi et ajustements",
+    ],
+  },
+] as const;
+
 /** Section problèmes. */
 export const problems = [
   "Vous avez l'impression de stagner ou d'être bloqué dans votre activité.",

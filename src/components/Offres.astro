@@ -1,0 +1,155 @@
+---
+import { offres, site } from "../config.ts";
+---
+
+<section id="offres" class="bg-cream py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+
+    <!-- En-tête -->
+    <div class="max-w-2xl mb-14 reveal" data-reveal="up">
+      <p class="text-turquoise text-xs font-sans font-semibold tracking-[0.18em] uppercase mb-4">
+        Mes offres
+      </p>
+      <h2 class="font-display text-3xl lg:text-4xl text-marine leading-snug">
+        L'offre qui correspond<br class="hidden lg:block" /> à votre situation
+      </h2>
+    </div>
+
+    <!-- Liste des offres -->
+    <div class="flex flex-col gap-3">
+      {offres.map((offre, i) => {
+        const isLight   = i === 0;
+        const isAccent  = i === 1;
+        const isMid     = i === 2;
+        const isPremium = i === 3;
+        const isLight3  = isLight || isAccent || isMid;
+        return (
+          <article
+            class:list={[
+              "reveal overflow-hidden rounded-2xl grid lg:grid-cols-[5fr_7fr]",
+              isLight   && "border border-cream-dark",
+              isAccent  && "border border-turquoise/20",
+              isMid     && "border border-marine/20",
+              isPremium && "border border-marine/30",
+            ]}
+            data-reveal="up"
+            data-delay={i * 100}
+          >
+
+            <!-- Colonne gauche : identité + prix -->
+            <div
+              class:list={[
+                "flex flex-col gap-5 px-8 py-8 lg:py-10",
+                isLight   && "bg-cream-dark",
+                isAccent  && "bg-turquoise/10",
+                isMid     && "bg-marine/10",
+                isPremium && "bg-marine",
+              ]}
+            >
+              <!-- Identité -->
+              <div class="flex flex-col gap-1">
+                <h3
+                  class:list={[
+                    "font-display text-2xl lg:text-3xl leading-tight",
+                    isLight3   && "text-marine",
+                    isPremium  && "text-cream",
+                  ]}
+                >
+                  {offre.name}
+                </h3>
+                <p
+                  class:list={[
+                    "font-sans text-sm",
+                    isLight3   && "text-muted",
+                    isPremium  && "text-cream/65",
+                  ]}
+                >
+                  {offre.tagline}
+                </p>
+              </div>
+
+              <!-- Prix -->
+              <div class="mt-auto flex items-baseline gap-1 whitespace-nowrap">
+                <span
+                  class:list={[
+                    "font-display text-4xl lg:text-5xl font-semibold",
+                    isLight3   && "text-marine",
+                    isPremium  && "text-cream",
+                  ]}
+                >
+                  {offre.price}
+                </span>
+                {offre.priceNote && (
+                  <span
+                    class:list={[
+                      "font-sans text-sm",
+                      isLight3   && "text-muted",
+                      isPremium  && "text-cream/60",
+                    ]}
+                  >
+                    {offre.priceNote}
+                  </span>
+                )}
+              </div>
+            </div>
+
+            <!-- Colonne droite : features -->
+            <div
+              class:list={[
+                "flex items-center px-8 py-8 lg:py-10",
+                isLight   && "bg-cream",
+                isAccent  && "bg-cream-dark",
+                isMid     && "bg-cream",
+                isPremium && "bg-marine-light",
+              ]}
+            >
+              <ul class="flex flex-col gap-4 w-full">
+                {offre.features.map((f) => (
+                  <li class="flex items-start gap-3">
+                    <span
+                      class:list={[
+                        "mt-0.5 shrink-0 w-5 h-5 rounded-full flex items-center justify-center",
+                        isLight3   && "bg-turquoise/10 text-turquoise",
+                        isPremium  && "bg-cream/10 text-turquoise-pale",
+                      ]}
+                    >
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                      </svg>
+                    </span>
+                    <span
+                      class:list={[
+                        "font-sans text-sm leading-relaxed",
+                        isLight3   && "text-anthracite",
+                        isPremium  && "text-cream/80",
+                      ]}
+                    >
+                      {f}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </article>
+        );
+      })}
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-10 flex flex-col items-center gap-6 reveal" data-reveal="up" data-delay={400}>
+      <a
+        href={site.calendly}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-gradient inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-cream font-sans font-medium text-sm transition-all duration-300"
+      >
+        Prendre rendez-vous
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
