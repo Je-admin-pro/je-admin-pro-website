@@ -36,8 +36,8 @@
   /* texte corps */
   --color-muted: #6B7280;
   /* texte secondaire / muted */
-  --color-muted-light: #9CA3AF;
-  /* texte très discret */
+  --color-muted-light: #69707D;
+  /* texte discret — assombri depuis #9CA3AF pour contraste AA (4.77:1 sur cream) */
 
   /* Typographie */
   --font-sans: 'Poppins', system-ui, sans-serif;

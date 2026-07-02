@@ -2,28 +2,25 @@
 
 > Julie Etienne accompagne les dirigeants de TPE/PME dans la restauration pour reprendre le contrôle de leur gestion administrative. Basée à Sélestat, elle intervient en présentiel ou à distance.
 
-## Services
+## Pages
 
-- Intervention ponctuelle : pré-comptabilité, constitution du dossier mensuel expert-comptable (50 €/h)
-- Clarté Gestion : autonomie guidée, audit, plan d'action, suivi à un mois (250 €)
-- Pilotage & Croissance : accompagnement bras droit du dirigeant, 3 RDV/mois (600 €/mois)
-- Gestion Maîtrisée : accompagnement complet sur 3 mois, 10 RDV, structuration complète (1 500 €)
+- [Accueil](https://je-admin-pro.fr/) : présentation, offres, méthode et FAQ
+- [Mentions légales](https://je-admin-pro.fr/mentions-legales) : informations légales de l'entreprise
+- [Politique de confidentialité](https://je-admin-pro.fr/politique-de-confidentialite) : traitement des données personnelles
 
-## Méthode
+## Offres
 
-1. Check-up complet — audit de la gestion administrative et des obligations réglementaires
-2. Feuille de route — plan d'action personnalisé et priorisé
-3. Structuration et sécurisation — mise en place de l'organisation et des méthodes de travail
-4. Autonomie et suivi — checklists, point de suivi à un mois
+- [Intervention ponctuelle](https://je-admin-pro.fr/#offres) : pré-comptabilité, constitution du dossier mensuel expert-comptable (50 €/h)
+- [Clarté Gestion](https://je-admin-pro.fr/#offres) : autonomie guidée, audit, plan d'action, suivi à un mois (250 €)
+- [Pilotage & Croissance](https://je-admin-pro.fr/#offres) : accompagnement bras droit du dirigeant, 3 RDV/mois (600 €/mois)
+- [Gestion Maîtrisée](https://je-admin-pro.fr/#offres) : accompagnement complet sur 3 mois, 10 RDV, structuration complète (1 500 €)
 
 ## Contact
 
-- Email : je.admin.pro@gmail.com
-- Téléphone : 06 49 99 94 47
-- Prise de rendez-vous : https://calendly.com/je-admin-pro/30min
+- [Prendre rendez-vous](https://calendly.com/je-admin-pro/30min) : créneau de 30 minutes en ligne
+- [Email](mailto:je.admin.pro@gmail.com) : je.admin.pro@gmail.com
+- [Téléphone](tel:0649999447) : 06 49 99 94 47
 
-## Pages
+## Méthode
 
-- Accueil : https://je-admin-pro.fr/
-- Mentions légales : https://je-admin-pro.fr/mentions-legales
-- Politique de confidentialité : https://je-admin-pro.fr/politique-de-confidentialite
+La méthode d'accompagnement se déroule en quatre étapes : check-up complet (audit de la gestion administrative et des obligations réglementaires), feuille de route (plan d'action personnalisé et priorisé), structuration et sécurisation (mise en place de l'organisation et des méthodes de travail), puis autonomie et suivi (checklists et point de suivi à un mois).
