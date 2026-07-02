@@ -1,16 +1,19 @@
 @import "tailwindcss";
 
-/* Fonts — self-hosted via @fontsource */
-@import "@fontsource/poppins/300.css";
-@import "@fontsource/poppins/400.css";
-@import "@fontsource/poppins/500.css";
-@import "@fontsource/poppins/600.css";
-@import "@fontsource/poppins/700.css";
-@import "@fontsource/playfair-display/400.css";
-@import "@fontsource/playfair-display/400-italic.css";
-@import "@fontsource/playfair-display/600.css";
-@import "@fontsource/playfair-display/600-italic.css";
-@import "@fontsource/playfair-display/700.css";
+/* Fonts — self-hosted via @fontsource.
+   Poppins : statique, seulement les poids utilisés (400/500/600/700) + 1 italique,
+   subsets latin & latin-ext uniquement (site FR).
+   Playfair Display : police variable (un seul fichier couvre 400→700). */
+@import "@fontsource/poppins/latin-400.css";
+@import "@fontsource/poppins/latin-ext-400.css";
+@import "@fontsource/poppins/latin-400-italic.css";
+@import "@fontsource/poppins/latin-500.css";
+@import "@fontsource/poppins/latin-ext-500.css";
+@import "@fontsource/poppins/latin-600.css";
+@import "@fontsource/poppins/latin-ext-600.css";
+@import "@fontsource/poppins/latin-700.css";
+@import "@fontsource/poppins/latin-ext-700.css";
+@import "@fontsource-variable/playfair-display/wght.css";
 
 /* ====================== Design tokens ====================== */
 @theme {
@@ -38,7 +41,7 @@
 
   /* Typographie */
   --font-sans: 'Poppins', system-ui, sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display Variable', 'Playfair Display', Georgia, serif;
 }
 
 /* ====================== Base ====================== */
