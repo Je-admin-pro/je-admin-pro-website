@@ -39,7 +39,7 @@ import { offres, site } from "../config.ts";
             <!-- Colonne gauche : identité + prix -->
             <div
               class:list={[
-                "flex flex-col gap-5 px-8 py-8 lg:py-10",
+                "flex flex-col justify-center gap-5 px-8 py-8 lg:py-10",
                 isLight   && "bg-cream-dark",
                 isAccent  && "bg-turquoise/10",
                 isMid     && "bg-marine/10",
@@ -67,7 +67,7 @@ import { offres, site } from "../config.ts";
                   {offre.tagline}
                 </p>
               </div>
-
+{/* 
               <!-- Prix -->
               <div class="mt-auto flex items-baseline gap-1 whitespace-nowrap">
                 <span
@@ -90,7 +90,7 @@ import { offres, site } from "../config.ts";
                     {offre.priceNote}
                   </span>
                 )}
-              </div>
+              </div> */}
             </div>
 
             <!-- Colonne droite : features -->
