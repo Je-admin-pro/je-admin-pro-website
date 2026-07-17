@@ -8,10 +8,12 @@ export const site = {
   city: "Sélestat",
   niche: "spécialisée dans la restauration",
   email: "je.admin.pro@gmail.com",
+  siret: "832 213 789 00023",
   phone: "06 49 99 94 47",
   calendly: "https://calendly.com/je-admin-pro/30min",
   url: "https://je-admin-pro.fr",
-  description: "Julie Etienne, assistante administrative indépendante spécialisée dans la restauration à Sélestat. Audit, organisation et accompagnement des dirigeants de TPE/PME.",
+  description:
+    "Julie Etienne, assistante administrative indépendante spécialisée dans la restauration à Sélestat. Audit, organisation et accompagnement des dirigeants de TPE/PME.",
 } as const;
 
 /** Section statistiques. */
@@ -19,18 +21,20 @@ export const stats = [
   {
     value: 28,
     suffix: "%",
-    description: "des dirigeants consacrent au moins 2 jours complets par semaine à des tâches administratives",
-
+    description:
+      "des dirigeants consacrent au moins 2 jours complets par semaine à des tâches administratives",
   },
   {
     value: 80,
     suffix: "+",
-    description: "obligations réglementaires différentes à gérer chaque année pour un dirigeant",
+    description:
+      "obligations réglementaires différentes à gérer chaque année pour un dirigeant",
   },
   {
     value: 82,
     suffix: "%",
-    description: "des dirigeants déclarent être surmenés et ne pas avoir de temps pour leur administratif",
+    description:
+      "des dirigeants déclarent être surmenés et ne pas avoir de temps pour leur administratif",
   },
 ] as const;
 
@@ -57,7 +61,6 @@ export const solutions = [
 /** Section offres. */
 export const offres = [
   {
-
     name: "Intervention ponctuelle",
     tagline: "À la carte",
     price: "50 €",
@@ -84,13 +87,14 @@ export const offres = [
     tagline: "Bras droit du dirigeant",
     price: "600 €",
     priceNote: "/mois",
-    features: ["3 rendez-vous de 1H30 par mois",
+    features: [
+      "3 rendez-vous de 1H30 par mois",
       "Audit de votre gestion",
       "Mise en place de votre organisation",
       "Aide à la prise de décision",
       "Suivi mensuel",
       "Ajustements",
-      "Conseils stratégiques"
+      "Conseils stratégiques",
     ],
   },
   {
@@ -149,7 +153,7 @@ export const problems = [
 /** Bande défilante — mots-clés de services. */
 export const marqueeKeywords = [
   "Gestion administrative",
-  'Facturation & relances',
+  "Facturation & relances",
   "Tableaux de bord",
   "Gestion des plannings",
   "Rédaction de courriers",
@@ -180,26 +184,32 @@ export const navLinks = [
 export const faq = [
   {
     question: "Comment se déroule la première prise de contact ?",
-    answer: "Un premier rendez-vous de découverte gratuit de 30 minutes (en visio ou en présentiel) permet de faire le point sur votre situation et de définir ensemble l'offre la plus adaptée. Sans engagement.",
+    answer:
+      "Un premier rendez-vous de découverte gratuit de 30 minutes (en visio ou en présentiel) permet de faire le point sur votre situation et de définir ensemble l'offre la plus adaptée. Sans engagement.",
   },
   {
     question: "Quelle est la différence avec mon expert-comptable ?",
-    answer: "L'expert-comptable traite vos chiffres. Moi, j'organise tout ce qui arrive avant : le classement, les dossiers, les relances, les plannings, les courriers. Nous sommes complémentaires, pas concurrents.",
+    answer:
+      "L'expert-comptable traite vos chiffres. Moi, j'organise tout ce qui arrive avant : le classement, les dossiers, les relances, les plannings, les courriers. Nous sommes complémentaires, pas concurrents.",
   },
   {
     question: "Mes documents et données sont-ils confidentiels ?",
-    answer: "Absolument. Une charte de confidentialité est signée dès le début de chaque mission. Vos données ne sont jamais partagées ni transmises à des tiers.",
+    answer:
+      "Absolument. Une charte de confidentialité est signée dès le début de chaque mission. Vos données ne sont jamais partagées ni transmises à des tiers.",
   },
   {
     question: "Travaillez-vous à distance ou en présentiel ?",
-    answer: "Les deux, selon vos préférences et votre localisation. Les rendez-vous peuvent se tenir dans vos locaux ou en visio. L'essentiel est que vous soyez à l'aise.",
+    answer:
+      "Les deux, selon vos préférences et votre localisation. Les rendez-vous peuvent se tenir dans vos locaux ou en visio. L'essentiel est que vous soyez à l'aise.",
   },
   {
     question: "Puis-je changer d'offre si mes besoins évoluent ?",
-    answer: "Oui. Si votre situation change en cours de mission, nous réévaluons ensemble et ajustons l'accompagnement en conséquence.",
+    answer:
+      "Oui. Si votre situation change en cours de mission, nous réévaluons ensemble et ajustons l'accompagnement en conséquence.",
   },
   {
     question: "Intervenez-vous uniquement dans la restauration ?",
-    answer: "La restauration est mon domaine de spécialisation, mais j'accompagne également d'autres TPE/PME dont les besoins en gestion administrative sont similaires. N'hésitez pas à me contacter pour en discuter.",
+    answer:
+      "La restauration est mon domaine de spécialisation, mais j'accompagne également d'autres TPE/PME dont les besoins en gestion administrative sont similaires. N'hésitez pas à me contacter pour en discuter.",
   },
 ] as const;

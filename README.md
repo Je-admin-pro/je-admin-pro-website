@@ -51,7 +51,3 @@ src/
 ## Contenu
 
 Tout le contenu éditorial est centralisé dans **`src/config.ts`** : coordonnées, offres, étapes de la méthode, FAQ, mots-clés du marquee. C'est le seul fichier à modifier pour mettre à jour les textes.
-
-## TODOs
-
-Voir `todo.txt` (gitignored) pour la liste des points restants (domaine final, SIRET, favicon).
