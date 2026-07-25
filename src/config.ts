@@ -50,10 +50,10 @@ export const solutions = [
   },
   {
     title: "Fini les samedis à chercher les factures",
-    body: "Toute votre facturation est gérée pour vous. Vous n'avez plus à vous en soucier et pouvez profiter de vos week-ends",
+    body: "Votre facturation est structurée pour ne plus jamais vous prendre vos week-ends",
   },
   {
-    title: "10 h récupérées en moyenne le 1er mois",
+    title: "10 h récupérées en moyenne par mois dès le 1er mois",
     body: "Votre temps coûte cher. Des heures récupérées sont des heures que vous pouvez investir dans votre croissance",
   },
 ] as const;
@@ -70,7 +70,8 @@ export const offres = [
       "Tableau des obligations restaurateur",
     ],
     ctaLabel: "Pour y voir clair",
-    ideal: "Idéal pour savoir où vous en êtes et par où commencer, sans vous engager.",
+    ideal:
+      "Idéal pour savoir où vous en êtes et par où commencer, sans vous engager.",
     recommended: false,
   },
   {
@@ -180,11 +181,6 @@ export const faq = [
     question: "Comment se déroule la première prise de contact ?",
     answer:
       "Un premier rendez-vous de découverte gratuit de 30 minutes (en visio ou en présentiel) permet de faire le point sur votre situation et de définir ensemble l'offre la plus adaptée. Sans engagement.",
-  },
-  {
-    question: "Quelle est la différence avec mon expert-comptable ?",
-    answer:
-      "L'expert-comptable traite vos chiffres. Moi, j'organise tout ce qui arrive avant : le classement, les dossiers, les relances, les plannings, les courriers. Nous sommes complémentaires, pas concurrents.",
   },
   {
     question: "Mes documents et données sont-ils confidentiels ?",
