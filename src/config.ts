@@ -22,19 +22,19 @@ export const stats = [
     value: 28,
     suffix: "%",
     description:
-      "des dirigeants consacrent au moins 2 jours complets par semaine à des tâches administratives",
+      "des dirigeants perdent 2 jours complets par semaine dans l'administratif (source CPME)",
   },
   {
     value: 80,
     suffix: "+",
     description:
-      "obligations réglementaires différentes à gérer chaque année pour un dirigeant",
+      "obligations réglementaires par an à gérer pour un patron de restauration",
   },
   {
     value: 82,
     suffix: "%",
     description:
-      "des dirigeants déclarent être surmenés et ne pas avoir de temps pour leur administratif",
+      "déclarent être surmenés et manquer de temps pour leur gestion",
   },
 ] as const;
 
@@ -45,109 +45,103 @@ export const solutions = [
     body: "Vos documents sont classés, vos dossiers structurés et vos échéances suivies. Vous reprenez le contrôle sans y passer vos journées.",
   },
   {
-    title: "Une charge mentale enfin allégée",
-    body: "Vous déléguez ce qui vous pèse et retrouvez la sérénité au quotidien pour vous concentrer sur ce que vous faites de mieux : développer votre activité.",
+    title: "Moins de stress et d'oublis et une sérénité retrouvée",
+    body: "Vous déléguez ce qui vous pèse et diminuez votre charge mentale au quotidien pour vous concentrer sur ce que vous faites de mieux : développer votre activité.",
   },
   {
-    title: "Une vision précise de votre activité et de vos objectifs",
-    body: "Tableaux de bord et indicateurs clés... vous disposez des bonnes informations au bon moment pour décider avec confiance.",
+    title: "Fini les samedis à chercher les factures",
+    body: "Toute votre facturation est gérée pour vous. Vous n'avez plus à vous en soucier et pouvez profiter de vos week-ends",
   },
   {
-    title: "Une entreprise sécurisée",
-    body: "Vos obligations réglementaires sont respectées et vos procédures documentées. Vous avancez sur des bases solides, sans craindre les oublis.",
+    title: "10 h récupérées en moyenne le 1er mois",
+    body: "Votre temps coûte cher. Des heures récupérées sont des heures que vous pouvez investir dans votre croissance",
   },
 ] as const;
 
 /** Section offres. */
 export const offres = [
   {
-    name: "Intervention ponctuelle",
-    tagline: "À la carte",
-    price: "50 €",
-    priceNote: "/heure",
+    eyebrow: "Démarrer léger",
+    name: "Le Check-Up Clarté",
+    baseline: ["10 jours", "2 RDV (2H30)"],
     features: [
-      "Pré-comptabilité",
-      "Constitution du dossier mensuel destiné à l'expert-comptable",
+      "Audit complet de votre organisation",
+      "Feuille de route priorisée sur 30 jours",
+      "Tableau des obligations restaurateur",
     ],
+    ctaLabel: "Pour y voir clair",
+    ideal: "Idéal pour savoir où vous en êtes et par où commencer, sans vous engager.",
+    recommended: false,
   },
   {
-    name: "Clarté Gestion",
-    tagline: "Autonomie guidée",
-    price: "250 €",
-    priceNote: "",
-    features: [
-      "2 rendez-vous de 2H",
-      "Audit de votre gestion",
-      "Élaboration d'un compte rendu et d'un plan d'action pour structurer votre gestion en autonomie",
-      "Suivi à un mois",
-    ],
-  },
-  {
-    name: "Pilotage & Croissance",
-    tagline: "Bras droit du dirigeant",
-    price: "600 €",
-    priceNote: "/mois",
-    features: [
-      "3 rendez-vous de 1H30 par mois",
-      "Audit de votre gestion",
-      "Mise en place de votre organisation",
-      "Aide à la prise de décision",
-      "Suivi mensuel",
-      "Ajustements",
-      "Conseils stratégiques",
-    ],
-  },
-  {
+    eyebrow: "Le plus choisi",
     name: "Gestion Maîtrisée",
-    tagline: "Accompagnement complet",
-    price: "1 500 €",
-    priceNote: "",
+    baseline: ["3 mois", "7 RDV (11H30)", "Suivi WhatsApp"],
     features: [
-      "10 rendez-vous de 1H30 sur 3 mois",
-      "Audit de votre gestion",
-      "Mise en place de votre organisation",
-      "Structuration de la méthode de travail",
-      "Suivi et ajustements",
+      "Check-Up + feuille de route incluse",
+      "3 sessions de structuration avec vous",
+      "Check-lists d'autonomie opérationnelle",
+      "Suivi à 1 mois inclus",
     ],
+    ctaLabel: "Pour devenir autonome en 3 mois",
+    ideal: "Idéal pour un gain de temps",
+    recommended: true,
+  },
+  {
+    eyebrow: "Tranquillité totale",
+    name: "Autonomie Sereine",
+    baseline: ["6 mois", "11 RDV (16H30)"],
+    features: [
+      "Tout Gestion Maîtrisée + 3 mois de suivi supplémentaire",
+      "Formation de votre second",
+      "Mise à jour réglementaire",
+    ],
+    ctaLabel: "Pour rester autonome durablement",
+    ideal: "Idéal pour une sérénité continue",
+    recommended: false,
   },
 ] as const;
 
 /** Livrables de la méthode. */
 export const deliverables = [
-  "Diagnostic avec compte-rendu détaillé",
-  "Plan d'action personnalisé et priorisé",
-  "Mise en place d'une organisation ajustée à vos besoins",
-  "Modèles de courrier, planning d'organisation hebdomadaire et check-list",
+  "Diagnostic clair avec compte-rendu détaillé",
+  "Une feuille de route priorisée, adaptée à votre restaurant",
+  "Une organisation qui vous correspond",
+  "Des outils adaptés : modèles sur mesure, planning d’organisation, check-lists .",
 ] as const;
 
 /** Section méthode. */
 export const methodSteps = [
   {
-    title: "Le Check-up Complet",
-    body: "Un audit approfondi de toute votre gestion administrative et vos obligations réglementaires.",
+    title: "Le Check-up complet",
+    body: "J'audite toute votre gestion administrative et vos obligations réglementaires.",
+    purpose: "identifier immédiatement les points de blocage et les risques.",
   },
   {
     title: "Votre feuille de route",
-    body: "Je rédige pour vous un plan d'action personnalisé et priorisé, adapté à la réalité de votre entreprise.",
+    body: "Rédaction d'un plan d'action clair, concret et adapté à votre réalité terrain.",
+    purpose: "savoir exactement quoi faire et dans quel ordre.",
   },
   {
     title: "Structuration et Sécurisation",
-    body: "Je travaille avec vous. Nous créons des méthodes de travail fluides et vérifions vos obligations administratives.",
+    body: "Nous créons ensemble des méthodes fluides et sécurisons vos obligations.",
+    purpose: "gagner du temps et éviter les oublis.",
   },
   {
     title: "Autonomie et Suivi",
-    body: "Je vous remets des checklists. Nous effectuons un point de suivi un mois après mon intervention pour ajuster les derniers détails.",
+    body: "Je vous remets vos outils et on fait le point 1 mois après.",
+    purpose: "rester autonome durablement, sans jamais retomber dans le chaos.",
   },
 ] as const;
 
 /** Section problèmes. */
 export const problems = [
-  "Vous avez l'impression de stagner ou d'être bloqué dans votre activité.",
-  "Vous dossiers s'accumulent et vous n'arrivez plus à vous y retrouver.",
-  "Votre charge mentale est saturée et vous n'arrive plus à avancer",
-  "Vous vous sentez seul, stressé et débordé.",
-  "Vous craignez d'oublier de faire des choses importantes.",
-  "Vous vous sentez esclave de votre administratif et vous perdez du temps.",
+  "Vous n'en pouvez plus de la paperasse.",
+  "Vous vivez sous pression en permanence.",
+  "Vous perdez un temps précieux.",
+  "Vous avez peur de faire une erreur.",
+  "Vous craignez de payer des pénalités ou des majorations.",
+  "Il est temps que ça change.",
 ] as const;
 
 /** Bande défilante — mots-clés de services. */
