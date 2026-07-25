@@ -75,7 +75,7 @@ export const offres = [
     recommended: false,
   },
   {
-    eyebrow: "Le plus choisi",
+    eyebrow: "Le meilleur compromis",
     name: "Gestion Maîtrisée",
     baseline: ["3 mois", "7 RDV (11H30)", "Suivi WhatsApp"],
     features: [
@@ -102,6 +102,10 @@ export const offres = [
     recommended: false,
   },
 ] as const;
+
+/** Mention affichée sous les cartes d'offres. */
+export const offresNote =
+  "Tarif transparent donné lors du RDV Clarté gratuit. Paiement échelonné possible";
 
 /** Livrables de la méthode. */
 export const deliverables = [

@@ -1,5 +1,5 @@
 ---
-import { offres, site } from "../config.ts";
+import { offres, offresNote, site } from "../config.ts";
 ---
 
 <section id="offres" class="bg-cream py-20 lg:py-28">
@@ -93,8 +93,17 @@ import { offres, site } from "../config.ts";
       })}
     </div>
 
+    <!-- Mention tarif -->
+    <p
+      class="mt-12 text-center font-sans text-sm text-muted leading-relaxed reveal"
+      data-reveal="up"
+      data-delay={300}
+    >
+      {offresNote}
+    </p>
+
     <!-- CTA -->
-    <div class="mt-14 flex flex-col items-center gap-6 reveal" data-reveal="up" data-delay={400}>
+    <div class="mt-8 flex flex-col items-center gap-6 reveal" data-reveal="up" data-delay={400}>
       <a
         href={site.calendly}
         target="_blank"
