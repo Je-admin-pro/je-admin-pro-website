@@ -184,7 +184,7 @@ export const faq = [
   {
     question: "Comment se déroule la première prise de contact ?",
     answer:
-      "Lors d'un premier rendez-vous découverte gratuit de 30 minutes (en visio ou en présentiel), nous faisons le point sur votre organisation administrative, vos difficultés et vos objectifs. Cet échange nous permet de déterminer ensemble l'accompagnement le plus adapté à votre situation. Sans engagement.",
+      "Lors d'un premier rendez-vous découverte gratuit de 30 minutes (en visio, par téléphone ou en présentiel), nous faisons le point sur votre organisation administrative, vos difficultés et vos objectifs. Cet échange nous permet de déterminer ensemble l'accompagnement le plus adapté à votre situation. Sans engagement.",
   },
   {
     question: "Mes documents et données sont-ils confidentiels ?",
