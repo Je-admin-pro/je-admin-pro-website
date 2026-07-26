@@ -45,7 +45,7 @@ export const solutions = [
     body: "Vos documents sont classés, vos dossiers structurés et vos échéances suivies. Vous reprenez le contrôle sans y passer vos journées.",
   },
   {
-    title: "Moins de stress et d'oublis et une sérénité retrouvée",
+    title: "Moins de stress, moins d'oublis et une sérénité retrouvée",
     body: "Vous déléguez ce qui vous pèse et diminuez votre charge mentale au quotidien pour vous concentrer sur ce que vous faites de mieux : développer votre activité.",
   },
   {
@@ -184,26 +184,31 @@ export const faq = [
   {
     question: "Comment se déroule la première prise de contact ?",
     answer:
-      "Un premier rendez-vous de découverte gratuit de 30 minutes (en visio ou en présentiel) permet de faire le point sur votre situation et de définir ensemble l'offre la plus adaptée. Sans engagement.",
+      "Lors d'un premier rendez-vous découverte gratuit de 30 minutes (en visio ou en présentiel), nous faisons le point sur votre organisation administrative, vos difficultés et vos objectifs. Cet échange nous permet de déterminer ensemble l'accompagnement le plus adapté à votre situation. Sans engagement.",
   },
   {
     question: "Mes documents et données sont-ils confidentiels ?",
     answer:
-      "Absolument. Une charte de confidentialité est signée dès le début de chaque mission. Vos données ne sont jamais partagées ni transmises à des tiers.",
+      "Absolument. Une charte de confidentialité est signée dès le début de chaque mission. Vos données sont traitées avec la plus grande discrétion et ne sont jamais partagées ni transmises à des tiers.",
   },
   {
     question: "Travaillez-vous à distance ou en présentiel ?",
     answer:
-      "Les deux, selon vos préférences et votre localisation. Les rendez-vous peuvent se tenir dans vos locaux ou en visio. L'essentiel est que vous soyez à l'aise.",
+      "Les deux. Selon votre localisation et vos préférences, les rendez-vous peuvent se dérouler dans vos locaux, téléphone ou en visioconférence. L'essentiel est de vous proposer un accompagnement simple, efficace et adapté à votre organisation.",
   },
   {
     question: "Puis-je changer d'offre si mes besoins évoluent ?",
     answer:
-      "Oui. Si votre situation change en cours de mission, nous réévaluons ensemble et ajustons l'accompagnement en conséquence.",
+      "Oui. Votre activité évolue, votre accompagnement aussi. Si vos besoins changent en cours de mission, nous faisons le point ensemble afin d'adapter la formule la plus pertinente.",
   },
   {
     question: "Intervenez-vous uniquement dans la restauration ?",
     answer:
-      "La restauration est mon domaine de spécialisation, mais j'accompagne également d'autres TPE/PME dont les besoins en gestion administrative sont similaires. N'hésitez pas à me contacter pour en discuter.",
+      "La restauration est mon domaine de spécialisation et représente le cœur de mon activité. Grâce à mon expérience du secteur, je connais les contraintes spécifiques des restaurateurs et je leur propose un accompagnement adapté à leur réalité. J'accompagne également certaines TPE lorsque leurs besoins correspondent à mon expertise.",
+  },
+  {
+    question: "Faites-vous l'administratif à ma place ?",
+    answer:
+      "Non. Mon objectif est de vous rendre autonome. Je mets en place une organisation claire, des outils personnalisés et une méthode adaptée à votre établissement afin que vous puissiez gérer votre administratif sereinement, sans dépendre d'une prestation externalisée. Si nécessaire, je reste disponible pour vous accompagner ponctuellement.",
   },
 ] as const;
