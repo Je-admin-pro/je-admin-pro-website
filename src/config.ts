@@ -110,7 +110,7 @@ export const offreSpeciale = {
   headline:
     "Janvier–Mars 2027 : la nouvelle réglementation sort. Vous êtes à jour ?",
   intro:
-    "C'est normal de ne pas être à jour en janvier. Les textes changent au 1er janvier, c'est pour ça qu'on fait le point maintenant.",
+    "C'est normal de ne pas être à jour en janvier. Les textes changent début janvier, c'est pour ça qu'on fait le point maintenant.",
   baseline: ["2 RDV (2H30)", "Support WhatsApp inclus"],
   risk: "Jusqu'à 4 800 € d'amende + pénalités + majorations en cas de non-conformité",
   features: [
