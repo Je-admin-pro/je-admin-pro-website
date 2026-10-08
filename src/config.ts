@@ -103,6 +103,30 @@ export const offres = [
   },
 ] as const;
 
+/** Offre spéciale restaurateurs, affichée sous les cartes d'offres (prix volontairement masqué). */
+export const offreSpeciale = {
+  badge: "Pour les restaurateurs",
+  name: "Bilan Annuel Serein",
+  headline:
+    "Janvier–Mars 2027 : la nouvelle réglementation sort. Vous êtes à jour ?",
+  intro:
+    "C'est normal de ne pas être à jour en janvier. Les textes changent au 1er janvier, c'est pour ça qu'on fait le point maintenant.",
+  baseline: ["2 RDV (2H30)", "Support WhatsApp inclus"],
+  risk: "Jusqu'à 4 800 € d'amende + pénalités + majorations en cas de non-conformité",
+  features: [
+    "1H30 d'audit flash + 1H de restitution priorisée à date du RDV 2",
+    "Tableau des obligations édition 2027 à jour à date du RDV 2",
+    "Compte-rendu des 3 risques prioritaires + plan d'action 30 jours",
+    "3 check-lists HACCP / Affichages / DUERP",
+  ],
+  period: "Période idéale : janvier à mars",
+  places: "5 places par mois",
+  after:
+    "Et après ? Vous choisissez, pas de surprise : mise à jour flash si une nouvelle réglementation majeure sort après le RDV 2, ou veille continue.",
+  disclaimer:
+    "Tableau à jour sur la base des textes en vigueur (Légifrance, Service-Public). Ne remplace pas un expert-comptable ou un avocat.",
+} as const;
+
 /** Mention affichée sous les cartes d'offres. */
 export const offresNote =
   "Tarif transparent donné lors du RDV Clarté gratuit. Paiement échelonné possible";
